@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Path and Shareable Link</title>
+    <title> Unique Path and Shareable Link by Akazbaba</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,18 +12,16 @@
             <a href="https://www.youtube.com/@akazbaba">
                 <img src="./logo.jpg" alt="logo" class="logo" id="logo">
             </a> 
-            Unique Path and Shareable Link
+             Unique Path and Shareable Link by Akazbaba
         </h1>
-         <!-- user enterence -->
-         <label for="username">Username:</label>
-         <input type="text" id="username" name="username" placeholder="write your email">
-         <input type="text" id="password" name="Password" placeholder="Write password">
         <form id="resumeForm">
-           
             <!-- Personal Information -->
             <fieldset id="">
                 <legend>Personal Information</legend>
-                
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+                <img id="photoPreview" alt="Photo Preview" style="display: block; margin-top: 10px; max-width: 200px; max-height: 200px; border: 1px solid #ccc;">
+
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -97,7 +95,7 @@
                 <input type="text" id="language_3" name="languages" placeholder="Language 3">
             </fieldset>
 
-           
+            <button type="button" id="downloadPdfButton">Download Resume as PDF</button>
         </form>
 
         <div id="resumeOutput" class="resume-output"></div>
@@ -109,6 +107,9 @@
             </a>
         </div>
     </div>
+
+    <!-- Script linking -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="typescript.js"></script>
 </body>
 </html>
